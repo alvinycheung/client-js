@@ -34,7 +34,6 @@ class Polygon extends EventEmitter {
 		this.ws = new WebSocket('wss://socket.polygon.io/crypto')
 		this.ws.on('open', this.onOpen.bind( this ))
 		this.ws.on('close', this.onDisconnect.bind( this ))
-		this.ws.on('disconnect', this.onDisconnect.bind( this ))
 		this.ws.on('error', this.onError.bind( this ))
 		this.ws.on('message', this.onMessage.bind( this ))
 	}
